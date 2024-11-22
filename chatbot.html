@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Appointment Setter Demo</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin: 0;
+      padding: 0;
+      background-color: #f9f9f9;
+    }
+    .title {
+      font-size: 3em;
+      font-weight: bold;
+      margin-top: 100px;
+      color: #333;
+    }
+    .subtitle {
+      font-size: 1.5em;
+      color: #666;
+      margin-top: 20px;
+    }
+    #chatbot-container {
+      position: fixed;
+      bottom: 0;
+      right: 0;
+    }
+  </style>
+</head>
+<body>
+  <!-- Title -->
+  <div class="title">Appointment Setter Demo</div>
+  
+  <!-- Subtitle -->
+  <div class="subtitle">Click Widget In Bottom Right Corner</div>
+  
+  <!-- Chatbot Container -->
+  <div id="chatbot-container"></div>
+
+  <!-- Voiceflow Chatbot Embed -->
+  <script type="text/javascript">
+    (function(d, t) {
+        var v = d.createElement(t), s = d.getElementsByTagName(t)[0];
+        v.onload = function() {
+          window.voiceflow.chat.load({
+            verify: { projectID: '673fcbf8860ba4d3e6e3ce85' },
+            url: 'https://general-runtime.voiceflow.com',
+            versionID: 'production'
+          });
+        }
+        v.src = "https://cdn.voiceflow.com/widget/bundle.mjs"; 
+        v.type = "text/javascript"; 
+        s.parentNode.insertBefore(v, s);
+    })(document, 'script');
+  </script>
+</body>
+</html>
